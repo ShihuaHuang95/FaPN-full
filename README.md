@@ -11,9 +11,10 @@
 ```
 ## Overview
 
-<!-- <img align="right" width="400" src="fpn_vs_fapn.png"> -->
+[comment]: <> (<!-- <img align="right" width="400" src="fpn_vs_fapn.png"> -->)
 <img width="400" src="./assert/fpn_vs_fapn.png">
-<!-- <img align="left" width="400" src="fpn_vs_fapn.png"> -->
+
+[comment]: <> (<!-- <img align="left" width="400" src="fpn_vs_fapn.png"> -->)
 <img width="400" src="./assert/feat_vis.png">
 
 This project provides the official implementation for our ICCV2021 paper 
