@@ -11,8 +11,10 @@
 ```
 ## Overview
 
-<!-- <img align="center" width="400" src="fpn_vs_fapn.png"> -->
+<!-- <img align="right" width="400" src="fpn_vs_fapn.png"> -->
 <img width="400" src="./assert/fpn_vs_fapn.png">
+<!-- <img align="left" width="400" src="fpn_vs_fapn.png"> -->
+<img width="400" src="./assert/feat_vis.png">
 
 This project provides the official implementation for our ICCV2021 paper 
 "[FaPN: Feature-aligned Pyramid Network for Dense Image Prediction](https://arxiv.org/pdf/2108.07058.pdf)" 
