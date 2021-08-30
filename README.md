@@ -37,7 +37,7 @@ cd /path/to/detectron2/tools
 python3 train_net.py --config-file <config.yaml> --num-gpus 8
 ```
 
-For example, to launch PanopticFCN training (1x schedule) with ResNet-50 backbone on 8 GPUs,
+For example, to launch Faster R-CNN training (1x schedule) with ResNet-50 backbone on 8 GPUs,
 one should execute:
 ```bash
 cd /path/to/detectron2/tools
