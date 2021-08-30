@@ -65,8 +65,7 @@ class FeatureAlign_V2(nn.Module):  # FaPN full version
         feat_arm = self.lateral_conv(feat_l)  # 0~1 * feats
         offset = self.offset(torch.cat([feat_arm, feat_up * 2], dim=1))  # concat for offset by compute the dif
         feat_align = self.relu(self.dcpack_L2([feat_up, offset], main_path))  # [feat, offset]
-        output_feats = [feat_up, feat_arm, feat_align]
-        return feat_align + feat_arm, output_feats
+        return feat_align + feat_arm
 
 
 class FAN(Backbone):
