@@ -65,7 +65,6 @@ python3 train_net.py --config-file <config.yaml> --num-gpus 8 --eval-only MODEL.
 <th valign="bottom">box<br/>APl</th>
 <th valign="bottom">download</th>
 <!-- TABLE BODY -->
-<!-- ROW: faster_rcnn_R_50_FAN_1x -->
  <tr><td align="left"><a href="configs/COCO-Detection/faster_rcnn_R_50_FAN_1x.yaml">R50</a></td>
 <td align="center">1x</td>
 <td align="center">39.2</td>
@@ -99,7 +98,6 @@ python3 train_net.py --config-file <config.yaml> --num-gpus 8 --eval-only MODEL.
 <th valign="bottom">mask<br/>iIoU_sup</th>
 <th valign="bottom">download</th>
 <!-- TABLE BODY -->
-<!-- ROW: faster_rcnn_R_50_FAN_1x -->
  <tr><td align="left"><a href="./projects/PointRend/configs/SemanticSegmentation/pointrend_semantic_R_50_FAN_1x_cityscapes.yaml">R50</a></td>
 <td align="center">1x</td>
 <td align="center">80.0</td>
@@ -119,6 +117,41 @@ python3 train_net.py --config-file <config.yaml> --num-gpus 8 --eval-only MODEL.
 <a href="https://drive.google.com/file/d/1M_MUJXNbiHYlN2D9m1kxfM1KXGb2C3E0/view?usp=sharing">log</a></td>
 </tr>
 </tbody></table>
+
+### ADE20K-150 Semantic Segmentation
+#### MaskFormer + FaPN:
+<table><tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th valign="bottom">Name</th>
+<th valign="bottom">mIoU<br/>Single-Scale</th>
+<th valign="bottom">mIoU<br/>Multi-Scale</th>
+<th valign="bottom">download</th>
+<!-- TABLE BODY -->
+ <tr><td align="left"><a href="./MaskFormer/configs/ade20k-150/swin/maskformer_swin_large+FaPN_IN21k_384_bs16_160k_res640.yaml">Swin+Large+IN21K</a></td>
+<td align="center">55.2</td>
+<td align="center">56.7</td>
+<td align="center"><a href="https://drive.google.com/file/d/1MGE6INbMhzXW6f9_eFejJtqlYEKYxTQM/view?usp=sharing">model</a>&nbsp;|&nbsp;
+<a href="https://drive.google.com/file/d/1CYW-G_OLn8EtGlDbktI6ykwFJ8q0aL4O/view?usp=sharing">log</a></td>
+</tbody></table>
+
+### COCOStuff-10K Semantic Segmentation
+#### MaskFormer + FaPN:
+<table><tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th valign="bottom">Name</th>
+<th valign="bottom">mIoU<br/>Single-Scale</th>
+<th valign="bottom">mIoU<br/>Multi-Scale</th>
+<th valign="bottom">download</th>
+<!-- TABLE BODY -->
+ <tr><td align="left"><a href="./MaskFormer/configs/coco-stuff-10k-171/maskformer_R101+FaPN_bs32_60k.yaml">R101</a></td>
+<td align="center">39.6</td>
+<td align="center">40.6</td>
+<td align="center"><a href="https://drive.google.com/file/d/1UvK8XOwqfIrGVQGdT84bkehU72cHSeXO/view?usp=sharing">model</a>&nbsp;|&nbsp;
+<a href="https://drive.google.com/file/d/1BNxjTnGrHxlsqtB23wiE1aOHgSJRJYwM/view?usp=sharing">log</a></td>
+</tbody></table>
+
 
 ### COCO Instance Segmentation
 #### Mask R-CNN + FaPN:
