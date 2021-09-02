@@ -13,6 +13,9 @@ MODEL:
   POSITION_HEAD:
     THING:
       POS_NUM: 5
+      THRES: 0.2
+    STUFF:
+      THRES: 0.1
 DATASETS:
   TRAIN: ("coco_2017_train_panoptic_separated",)
   TEST: ("coco_2017_val_panoptic_separated",)

@@ -10,8 +10,9 @@
 }
 ```
 
+
 ## Installation
-* Copy this project to `/path/to/MaskFormer`
+* Copy this project to `/path/to/PanopticFCN`
 
 ## Training
 To train a model with 8 GPUs, run:

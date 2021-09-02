@@ -1,4 +1,4 @@
-# FaPN: Feature-aligned Pyramid Network for Dense Image Prediction [[arXiv]](https://arxiv.org/pdf/2108.07058.pdf)
+# FaPN: Feature-aligned Pyramid Network for Dense Image Prediction [[arXiv]](https://arxiv.org/pdf/2108.07058.pdf) [[Project Page]](http://www.shihuahuang.cn/fapn/)
 
 ```BibTex
 @inproceedings{
@@ -15,9 +15,10 @@ FaPN vs. FPN           |  Before vs. After Alignment
 :-------------------------:|:-------------------------:
 <img width="380" src="./assert/fpn_vs_fapn.png"> |  <img width="400" src="./assert/feat_vis.png">
 
-This project provides the official implementation for our ICCV2021 paper 
+This project provides the whole official implementation for our ICCV2021 paper 
 "[FaPN: Feature-aligned Pyramid Network for Dense Image Prediction](https://arxiv.org/pdf/2108.07058.pdf)" 
-based on [Detectron2](https://github.com/facebookresearch/detectron2). 
+based on [Detectron2](https://github.com/facebookresearch/detectron2), [PanoticFCN](https://github.com/dvlab-research/PanopticFCN), and
+[MaskFormer](https://github.com/facebookresearch/MaskFormer). 
 FaPN is a simple yet effective top-down pyramidal architecture to generate multi-scale features for dense image prediction.
 Comprised of a feature alignment module (FAM) and a feature selection module (FSM), FaPN addresses the issue of feature alignment
 in  the original [FPN](https://arxiv.org/abs/1612.03144), leading to substaintial improvements on various dense prediction tasks, such as object detection, semantic, instance, panoptic segmentation, etc. 
@@ -27,7 +28,6 @@ in  the original [FPN](https://arxiv.org/abs/1612.03144), leading to substaintia
 This project is based on [Detectron2](https://github.com/facebookresearch/detectron2), which can be constructed as follows.
 * Install Detectron2 following [the instructions](https://detectron2.readthedocs.io/tutorials/install.html).
 * Setup the dataset following [the structure](https://github.com/facebookresearch/detectron2/blob/master/datasets/README.md).
-* Copy this project to `/path/to/detectron2`
 * Install DCNv2 following [Install DCNv2.md](./DCNv2/README.md).
 
 ## Training
@@ -177,7 +177,7 @@ python3 train_net.py --config-file <config.yaml> --num-gpus 8 --eval-only MODEL.
 </tbody></table>
 
 
-### COCO Instance Segmentation
+### COCO Panoptic Segmentation
 #### PanopticFPN + FaPN:
 <table><tbody>
 <!-- START TABLE -->
@@ -210,5 +210,40 @@ python3 train_net.py --config-file <config.yaml> --num-gpus 8 --eval-only MODEL.
 <td align="center">53.3</td>
 <td align="center"><a href="https://drive.google.com/file/d/1buNmJEETxZmAnjhZCz4WqF5pSc9ezPow/view?usp=sharing">model</a>&nbsp;|&nbsp;
 <a href="https://drive.google.com/file/d/106WqJEdRbbuKQa2eZW8Zwf3ucgARkz7K/view?usp=sharing">log</a></td>
+</tr>
+</tbody></table>
+
+#### PanopticFCN + FaPN:
+<table><tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th valign="bottom">Name</th>
+<th valign="bottom">lr<br/>sched</th>
+<th valign="bottom">PQ</th>
+<th valign="bottom">mask<br/>mIoU</th>
+<th valign="bottom">St<br/>PQ</th>
+<th valign="bottom">box<br/>AP</th>
+<th valign="bottom">Th<br/>PQ</th>
+<th valign="bottom">download</th>
+<!-- TABLE BODY -->
+ <tr><td align="left"><a href="./PanopticFCN/configs/PanopticFCN-R50+FaPN-1x-FAST.yaml">R50</a></td>
+<td align="center">1x</td>
+<td align="center">41.8</td>
+<td align="center">42.0</td>
+<td align="center">33.1</td>
+<td align="center">32.3</td>
+<td align="center">47.6</td>
+<td align="center"><a href="https://drive.google.com/file/d/1r3OlzCityLm9hhcXpoDAcfF6g4t4Qro1/view?usp=sharing">model</a>&nbsp;|&nbsp;
+<a href="https://drive.google.com/file/d/1BYylyzmDOlBWObopjYjXSWdopG1Vijqx/view?usp=sharing">log</a></td>
+</tr>
+ <tr><td align="left"><a href="./PanopticFCN/configs/PanopticFCN-R50-600+FaPN-3x-FAST.yaml">R50-600</a></td>
+<td align="center">3x</td>
+<td align="center">43.5</td>
+<td align="center">43.5</td>
+<td align="center">35.1</td>
+<td align="center">34.5</td>
+<td align="center">49.0</td>
+<td align="center"><a href="https://drive.google.com/file/d/1RIlPN1fvdQ95Yytjs-cir-FCWTSeUx2E/view?usp=sharing">model</a>&nbsp;|&nbsp;
+<a href="https://drive.google.com/file/d/1jhqspevFvlLvpNKv0oh-5A1Mw0wGu97r/view?usp=sharing">log</a></td>
 </tr>
 </tbody></table>

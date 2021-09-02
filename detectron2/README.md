@@ -9,26 +9,10 @@
   year={2021}
 }
 ```
-## Overview
-
-FaPN vs. FPN           |  Before vs. After Alignment
-:-------------------------:|:-------------------------:
-<img width="380" src="./assert/fpn_vs_fapn.png"> |  <img width="400" src="./assert/feat_vis.png">
-
-This project provides the official implementation for our ICCV2021 paper 
-"[FaPN: Feature-aligned Pyramid Network for Dense Image Prediction](https://arxiv.org/pdf/2108.07058.pdf)" 
-based on [Detectron2](https://github.com/facebookresearch/detectron2). 
-FaPN is a simple yet effective top-down pyramidal architecture to generate multi-scale features for dense image prediction.
-Comprised of a feature alignment module (FAM) and a feature selection module (FSM), FaPN addresses the issue of feature alignment
-in  the original [FPN](https://arxiv.org/abs/1612.03144), leading to substaintial improvements on various dense prediction tasks, such as object detection, semantic, instance, panoptic segmentation, etc. 
 
 
 ## Installation
-This project is based on [Detectron2](https://github.com/facebookresearch/detectron2), which can be constructed as follows.
-* Install Detectron2 following [the instructions](https://detectron2.readthedocs.io/tutorials/install.html).
-* Setup the dataset following [the structure](https://github.com/facebookresearch/detectron2/blob/master/datasets/README.md).
 * Copy this project to `/path/to/detectron2`
-* Install DCNv2 following [Install DCNv2.md](./DCNv2/README.md).
 
 ## Training
 To train a model with 8 GPUs, run:

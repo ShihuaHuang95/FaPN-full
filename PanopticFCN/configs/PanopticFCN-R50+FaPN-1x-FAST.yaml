@@ -1,7 +1,7 @@
 MODEL:
   META_ARCHITECTURE: "PanopticFCN"
   WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
-  WEIGHTS: "
+#  WEIGHTS: "/raid/huangsh/codes/detectron2/projects/PanopticFCN/output/model_final.pth"
 #  WEIGHTS: "/data/detectron2_modelzoo/basemodel/R-50-MSRA.pkl"
   MASK_ON: True
   PIXEL_MEAN: [123.675, 116.28, 103.53]
@@ -11,6 +11,11 @@ MODEL:
     OUT_FEATURES: ["res2", "res3", "res4", "res5"]
   FPN:
     IN_FEATURES: ["res2", "res3", "res4", "res5"]
+  POSITION_HEAD:
+    THING:
+      THRES: 0.2
+    STUFF:
+      THRES: 0.1
 DATASETS:
   TRAIN: ("coco_2017_train_panoptic_separated",)
   TEST: ("coco_2017_val_panoptic_separated",)
@@ -38,4 +43,6 @@ INPUT:
   MAX_SIZE_TEST: 1333
   MASK_FORMAT: "bitmask"
 VERSION: 2
+
+OUTPUT_DIR: "./PanopticFCN_r50_1x-Fast_FAM"
 
