@@ -30,27 +30,6 @@ This project is based on [Detectron2](https://github.com/facebookresearch/detect
 * Setup the dataset following [the structure](https://github.com/facebookresearch/detectron2/blob/master/datasets/README.md).
 * Install DCNv2 following [Install DCNv2.md](./DCNv2/README.md).
 
-## Training
-To train a model with 8 GPUs, run:
-```bash
-cd /path/to/detectron2/tools
-python3 train_net.py --config-file <config.yaml> --num-gpus 8
-```
-
-For example, to launch Faster R-CNN training (1x schedule) with ResNet-50 backbone on 8 GPUs,
-one should execute:
-```bash
-cd /path/to/detectron2/tools
-python3 train_net.py --config-file ../configs\COCO-Detection\faster_rcnn_R_50_FAN_1x.yaml --num-gpus 8
-```
-
-## Evaluation
-To evaluate a pre-trained model with 8 GPUs, run:
-```bash
-cd /path/to/detectron2/tools
-python3 train_net.py --config-file <config.yaml> --num-gpus 8 --eval-only MODEL.WEIGHTS /path/to/model_checkpoint
-```
-
 ## Results
 ### COCO Object Detection
 #### Faster R-CNN + FaPN:
