@@ -11,7 +11,7 @@
 ```
 
 ## Installation
-* Install Detectron2 following [the instructions](https://github.com/dvlab-research/PanopticFCN/blob/main/README.md)
+* Install MaskFormer following [the instructions](https://github.com/facebookresearch/MaskFormer/blob/main/INSTALL.md)
 * Setup the dataset following [the structure](https://github.com/facebookresearch/MaskFormer/blob/main/datasets/README.md)
 * Copy this project to `/path/to/MaskFormer`
 
