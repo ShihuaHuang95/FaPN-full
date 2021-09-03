@@ -11,12 +11,17 @@
 ```
 
 ## Installation
+* Install Detectron2 following [the instructions](https://github.com/dvlab-research/PanopticFCN/blob/main/README.md)
+* Setup the dataset following [the structure](https://github.com/facebookresearch/MaskFormer/blob/main/datasets/README.md)
 * Copy this project to `/path/to/MaskFormer`
 
 ## Training
 To train a model with 8 GPUs, run:
 ```bash
-cd /path/to/detectron2/tools
+cd /path/to/MaskFormer
+python3 ./train_net.py \
+  --config-file configs/ade20k-150/swin/ \
+  --num-gpus 1 
 python3 train_net.py --config-file <config.yaml> --num-gpus 8
 ```
 
